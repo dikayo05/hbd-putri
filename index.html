@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff7e8" />
+    <title>Surat Rahasia untuk Adik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="page-shell">
+        <nav class="site-nav" aria-label="Navigasi utama">
+            <a class="site-nav__brand" href="#page-title">birthday note <span>✦</span></a>
+            <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">
+                <span class="music-toggle__icon" aria-hidden="true">♫</span>
+                <span id="musicToggleLabel">Musik: mati</span>
+            </button>
+        </nav>
+        <div class="top-note"><span class="top-note__dot"></span> pengiriman kebahagiaan · express</div>
+
+        <section class="hero" aria-labelledby="page-title">
+            <div class="hero__copy">
+                <p class="eyebrow">untuk manusia kecil kesayangan</p>
+                <h1 id="page-title">Hari ini kamu<br /><span>naik level!</span> <span class="sparkle">✦</span></h1>
+                <p class="hero__text">Ada satu paket rahasia yang cuma bisa dibuka oleh <strong>adik paling seru
+                        sedunia.</strong></p>
+                <button class="primary-button" id="openLetter" type="button">
+                    <span class="button-icon">✉</span> Buka surat rahasia
+                </button>
+                <p class="micro-copy">Psst... jangan lupa senyum dulu.</p>
+            </div>
+
+            <div class="hero__scene" aria-label="Ilustrasi kotak hadiah, balon, dan confetti">
+                <div class="confetti confetti--one"></div>
+                <div class="confetti confetti--two"></div>
+                <div class="confetti confetti--three"></div>
+                <div class="balloon balloon--pink" data-balloon="Balon pink bilang: kamu keren!"><span>✦</span></div>
+                <div class="balloon balloon--yellow" data-balloon="Balon kuning bilang: terus bersinar!"><span>♥</span>
+                </div>
+                <div class="balloon balloon--mint" data-balloon="Balon mint bilang: hari ini milikmu!"><span>●</span>
+                </div>
+                <div class="string string--pink"></div>
+                <div class="string string--yellow"></div>
+                <div class="string string--mint"></div>
+                <div class="gift-shadow"></div>
+                <div class="gift-box">
+                    <div class="gift-box__ribbon"></div>
+                    <div class="gift-box__lid"><i></i></div>
+                    <div class="gift-box__body"></div>
+                    <div class="gift-box__bow bow-left"></div>
+                    <div class="gift-box__bow bow-right"></div>
+                </div>
+                <div class="hero-sticker">it’s<br /><strong>your</strong><br />day!</div>
+            </div>
+        </section>
+
+        <section class="letter-section" id="letterSection" aria-labelledby="letter-title">
+            <div class="section-label"><span>01</span> isi paket rahasia</div>
+            <div class="letter-card" id="letterCard">
+                <div class="letter-card__seal">★</div>
+                <div class="letter-card__topline"><span>CATATAN PRIBADI</span><span>11 — 09 — 2026</span></div>
+                <div class="letter-card__content">
+                    <p class="letter-greeting">Hai, adikku!</p>
+                    <p>Selamat ulang tahun untuk orang yang bisa membuat rumah jadi lebih ramai, lebih lucu, dan
+                        jelas... sedikit lebih berantakan.</p>
+                    <p>Semoga tahun ini dipenuhi hal-hal yang bikin kamu melompat kegirangan, orang-orang yang sayang
+                        sama kamu, dan dessert yang porsinya tidak pernah mengecewakan.</p>
+                    <p class="letter-signoff">Tetap jadi kamu yang ajaib,<br /><strong>— kakakmu ♡</strong></p>
+                </div>
+                <div class="letter-card__footer"><span>dibuat dengan banyak cinta</span><span>♥ ♥ ♥</span></div>
+            </div>
+        </section>
+
+        <section class="party-section" aria-labelledby="party-title">
+            <div class="section-heading">
+                <div>
+                    <div class="section-label"><span>02</span> mini party mode</div>
+                    <h2 id="party-title">Pilih aksimu.</h2>
+                </div>
+                <p>Tekan apa saja. Tidak ada yang meledak—kecuali confetti.</p>
+            </div>
+            <div class="party-grid">
+                <button class="party-card party-card--cake" id="cakeButton" type="button"><span
+                        class="party-card__number">A</span><span class="cake-emoji">🎂</span><strong>Tiup
+                        lilin</strong><small>buat permintaan rahasia</small></button>
+                <button class="party-card party-card--music" id="musicButton" type="button"><span
+                        class="party-card__number">B</span><span class="music-note">♫</span><strong>Putar lagu
+                        pesta</strong><small>groove kecil-kecilan</small></button>
+                <button class="party-card party-card--wish" id="wishButton" type="button"><span
+                        class="party-card__number">C</span><span class="wish-star">✦</span><strong>Ambil
+                        harapan</strong><small>semesta sedang online</small></button>
+            </div>
+            <div class="party-message" id="partyMessage" role="status" aria-live="polite">Hari ini adalah hari yang
+                sangat sah untuk minta potongan kue kedua.</div>
+        </section>
+
+        <footer><span>made for the birthday girl</span><span>jangan lupa bahagia tiap hari ✿</span></footer>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <audio id="partyMusic" src="music.mp3" loop preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
