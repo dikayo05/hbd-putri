@@ -67,14 +67,15 @@
                 <div class="letter-card__seal">★</div>
                 <div class="letter-card__topline"><span>CATATAN PRIBADI</span><span>11 — 09 — 2026</span></div>
                 <div class="letter-card__content">
-                    <p class="letter-greeting">Hai, adikku!</p>
-                    <p>Selamat ulang tahun untuk orang yang bisa membuat rumah jadi lebih ramai, lebih lucu, dan
-                        jelas... sedikit lebih berantakan.</p>
+                    <p class="letter-greeting">Halo, Putri!</p>
+                    <p>Selamat ulang tahun untuk adik yang mungkin jarang ketemu, tapi tetap nggak pernah benar-benar
+                        jauh. Semoga makin banyak hal seru yang kamu temui, makin banyak alasan buat ketawa, dan
+                        tentunya... makin banyak seblak enak yang bisa kamu makan.</p>
                     <p>Semoga tahun ini dipenuhi hal-hal yang bikin kamu melompat kegirangan, orang-orang yang sayang
-                        sama kamu, dan dessert yang porsinya tidak pernah mengecewakan.</p>
-                    <p class="letter-signoff">Tetap jadi kamu yang ajaib,<br /><strong>— kakakmu ♡</strong></p>
+                        sama kamu, dan seblak yang porsinya gak pernah mengecewakan.</p>
+                    <p class="letter-signoff">Tetap jadi kamu yang keren,<br /><strong>— kakakmu ♡</strong></p>
                 </div>
-                <div class="letter-card__footer"><span>dibuat dengan banyak cinta</span><span>♥ ♥ ♥</span></div>
+                <div class="letter-card__footer"><span>jangan scroll tiktok mulu :v</span><span>♥ ♥ ♥</span></div>
             </div>
         </section>
 
@@ -104,7 +105,54 @@
         <footer><span>made for the birthday girl</span><span>jangan lupa bahagia tiap hari ✿</span></footer>
     </main>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <audio id="partyMusic" src="music.mp3" loop preload="auto"></audio>
+    <div class="cake-modal" id="cakeModal" role="dialog" aria-modal="true" aria-labelledby="cakeModalTitle" hidden>
+        <div class="cake-modal__backdrop" data-close-cake></div>
+        <div class="cake-modal__content">
+            <button class="cake-modal__close" type="button" aria-label="Tutup kue" data-close-cake>×</button>
+            <p class="eyebrow">make a wish</p>
+            <h2 id="cakeModalTitle">Tiup semua lilinnya!</h2>
+            <p class="cake-modal__hint">Tap api di atas kue sampai semuanya padam.</p>
+            <div class="big-cake" aria-label="Kue ulang tahun dengan lima lilin">
+                <div class="big-cake__candles">
+                    <button class="candle" type="button" aria-label="Padamkan lilin 1"><span
+                            class="candle__flame">✦</span><span class="candle__stick"></span></button>
+                    <button class="candle" type="button" aria-label="Padamkan lilin 2"><span
+                            class="candle__flame">✦</span><span class="candle__stick"></span></button>
+                    <button class="candle" type="button" aria-label="Padamkan lilin 3"><span
+                            class="candle__flame">✦</span><span class="candle__stick"></span></button>
+                    <button class="candle" type="button" aria-label="Padamkan lilin 4"><span
+                            class="candle__flame">✦</span><span class="candle__stick"></span></button>
+                    <button class="candle" type="button" aria-label="Padamkan lilin 5"><span
+                            class="candle__flame">✦</span><span class="candle__stick"></span></button>
+                </div>
+                <div class="big-cake__top">happy<br /><strong>birthday!</strong></div>
+                <div class="big-cake__middle"></div>
+                <div class="big-cake__bottom"></div>
+            </div>
+            <p class="cake-modal__status" id="cakeStatus" aria-live="polite">5 api masih menyala</p>
+        </div>
+    </div>
+    <div class="wish-modal" id="wishModal" role="dialog" aria-modal="true" aria-labelledby="wishModalTitle" hidden>
+        <div class="wish-modal__backdrop" data-close-wish></div>
+        <div class="wish-modal__content">
+            <button class="wish-modal__close" type="button" aria-label="Tutup permohonan" data-close-wish>×</button>
+            <p class="eyebrow">a little bit of magic</p>
+            <h2 id="wishModalTitle">Tulis permohonanmu.</h2>
+            <p class="wish-modal__hint">Kirimkan satu harapan terbaikmu ke langit.</p>
+            <form id="wishForm">
+                <label class="wish-modal__label" for="wishInput">Permohonan rahasia</label>
+                <textarea id="wishInput" name="wish" rows="4" maxlength="180" required
+                    placeholder="Aku berharap..."></textarea>
+                <button class="wish-modal__submit" type="submit"><span aria-hidden="true">✦</span> Kirim ke
+                    langit</button>
+            </form>
+        </div>
+    </div>
+    <audio id="partyMusic" src="music.mp3" autoplay loop preload="auto"></audio>
+    <audio id="candlePop" src="sfx/pop.mp3" preload="auto"></audio>
+    <audio id="candleYeay" src="sfx/yeay.mp3" preload="auto"></audio>
+    <audio id="balloonSound" src="sfx/ballon.mp3" preload="auto"></audio>
+    <audio id="wishSound" src="sfx/shrine.mp3" preload="auto"></audio>
     <script src="script.js"></script>
 </body>
 
